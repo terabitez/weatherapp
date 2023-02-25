@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <header className="bg-white shadow ">
-      <div className="lg:flex lg:items-center lg:justify-between  p-5">
+      <div className="flex lg:items-center justify-between  p-5">
         <div className="min-w-0 flex-1">
           <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
             <div className="flex-shrink-0">
@@ -29,7 +29,7 @@ function Header() {
         {!isAuthenticated ? (
           <></>
         ) : (
-          <div className="mt-5 flex lg:mt-0 lg:ml-4">
+          <div className=" flex lg:mt-0 lg:ml-4">
             <span className=" sm:block">
               <button
                 onClick={onLogout}

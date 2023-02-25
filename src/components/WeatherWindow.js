@@ -15,7 +15,7 @@ function WeatherWindow() {
   return (
     <div>
       
-      <main className="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-8">
+      <main className=" min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-20">
         <div className="relative rounded-xl overflow-auto bg-slate-400">
           <div className="shadow-sm overflow-hidden my-8">
             <table className="border-collapse table-auto w-full text-sm">
@@ -67,11 +67,11 @@ function WeatherWindow() {
           </div>
         </div>
 
-        <div className="mt-10 mr-0 justify-end gap-x-6 w-full ">
+        <div className="mt-10 mr-0 justify-end gap-x-6 w-full  ">
           <button
             onClick={onBack}
             type="button"
-            className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className=" float-right inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
             <ChevronLeftIcon
               className="-ml-1 mr-2 h-5 w-5 text-gray-500"
