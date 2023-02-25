@@ -1,14 +1,15 @@
+import { useNavigate } from "react-router-dom"
 import SearchBox from "./SearchBox"
 
 
 
 function Home() {
 
-
+    const navigate = useNavigate();
     const onSubmit =(data)=>{
         console.log("onsbumithoem")
         console.log(data)
-  
+        navigate('/weather')
 
     }
 

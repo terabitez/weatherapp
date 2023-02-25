@@ -1,14 +1,15 @@
-
 import { UserIcon } from '@heroicons/react/24/outline'
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
 
+const navigate = useNavigate();
 
 const onLogout = (event)=>{
     console.log("onLpogout")
 
+    navigate('/landing')
 }
 
   return (
@@ -30,8 +31,6 @@ const onLogout = (event)=>{
             </div>
             <div className="mt-5 flex lg:mt-0 lg:ml-4">
               <span className="hidden sm:block">
-             
-
                 <button
                   onClick={onLogout}
                   type="button"
@@ -43,7 +42,6 @@ const onLogout = (event)=>{
                   />
                   Logout
                 </button>
-          
               </span>
             </div>
           </div>

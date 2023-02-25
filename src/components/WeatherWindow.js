@@ -1,10 +1,14 @@
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 function WeatherWindow() {
 
-const onBack = () => {
-    console.log("Onaback")
-}
+    const navigate = useNavigate()
+    const onBack = () => {
+        console.log("Onaback")
+        navigate('/home')
+    }
 
 
   return (
