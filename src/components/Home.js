@@ -6,12 +6,39 @@ import SearchBox from "./SearchBox"
 function Home() {
 
     const navigate = useNavigate();
-    const onSubmit =(data)=>{
-        console.log("onsbumithoem")
-        console.log(data)
-        navigate('/weather')
 
+
+    async function searchCity(query) {
+        const apiKey = '642dd7c4a2ffc1209defa3d44fa43592'; // Replace with your API key
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}`;
+    
+        const redirect = (d)=>{
+            navigate('/weather',{state:d})
+        }
+
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          console.log(data)
+          redirect(data)
+  
+        } catch (error) {
+            console.error(error);
+            return null;
+        }
     }
+    
+    
+    
+    const onSubmit =(data)=>{
+        
+        searchCity(data)
+       // navigate('/weather')
+        
+       
+    }
+
+  
 
    return (
     <>

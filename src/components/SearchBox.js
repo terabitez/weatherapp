@@ -7,7 +7,7 @@ export default function SearchBox(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        props.onSubmit(inputValue)
+        props.onSubmit(inputValue);
       }
     
       function handleInputChange(event) {
@@ -15,7 +15,7 @@ export default function SearchBox(props) {
       }
 
     return (
-        <form onSubmit={handleSubmit} onChange={handleInputChange} className="max-w-sm px-4">
+        <form onSubmit={handleSubmit}  className="max-w-sm px-4">
             <div className="relative">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ export default function SearchBox(props) {
                 </svg>
                 <input 
                     value={inputValue}
-
+                    onChange={handleInputChange}
                     type="text"
                     placeholder="City"
                     className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
