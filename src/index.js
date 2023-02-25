@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, useNavigate  } from 'react-router-dom';
-import { Auth0Provider, withAuthenticationRequired  } from '@auth0/auth0-react';
+import { Auth0Provider  } from '@auth0/auth0-react';
 
 
 const Auth0ProviderWithRedirectCallback = ({ children, ...props }) => {
@@ -19,17 +19,19 @@ const Auth0ProviderWithRedirectCallback = ({ children, ...props }) => {
     </Auth0Provider>
   );
 }
-
+const domain  = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId  = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const redirecturi  = process.env.REACT_APP_AUTH0_CALLBACK_URL;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  
     <BrowserRouter>
      <Auth0ProviderWithRedirectCallback
-        domain="dev-zzy56vuxu2shyzyw.us.auth0.com"
-        clientId="OERMvyTmTvII5e8vtGhgmLtDk5BMN2kI"
+        domain={domain}
+        clientId={clientId}
         authorizationParams={{
-          redirect_uri: "http://localhost:3000"
+          redirect_uri: redirecturi
         }}
     >
       <Routes>
