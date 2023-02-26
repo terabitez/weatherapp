@@ -44,22 +44,22 @@ function WeatherWindow() {
               <tbody className="bg-white">
                 <tr>
                   <td className="border-b border-slate-100  p-4 pl-8 text-slate-600">
-                 {moment(location.state.coord.dt).format("MM/DD/YYYY")}
+                 {location.state? moment(location.state.coord.dt).format("MM/DD/YYYY"):""}
                   </td>
                   <td className="border-b border-slate-100  p-4 text-slate-600 ">
-                  {location.state.main.temp}
+                  {location.state? location.state.main.temp : ""}
                   </td>
                   <td className="border-b border-slate-100  p-4 pr-8 text-slate-600">
-                  {location.state.weather[0].description}
+                  {location.state? location.state.weather[0].description : ""}
                   </td>
                   <td className="border-b border-slate-100  p-4 pl-8 text-slate-600">
-                  {location.state.weather[0].main}
+                  {location.state? location.state.weather[0].main : ""}
                   </td>
                   <td className="border-b border-slate-100  p-4 text-slate-600">
-                  {location.state.main.pressure}
+                  {location.state? location.state.main.pressure :""}
                   </td>
                   <td className="border-b border-slate-100  p-4 pr-8 text-slate-600 ">
-                  {location.state.main.humidity}
+                  {location.state? location.state.main.humidity: ""}
                   </td>
                 </tr>
               </tbody>
