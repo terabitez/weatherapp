@@ -27,16 +27,16 @@ function WeatherWindow() {
                   <th className="border-b font-medium p-4 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
                     Temp(F)
                   </th>
-                  <th className="border-b font-medium p-4 pr-8 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
+                  <th className="max-[390px]:hidden border-b font-medium p-4 pr-8 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
                     Description
                   </th>
-                  <th className="border-b font-medium p-4 pl-8 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
+                  <th className="max-[390px]:hidden min-[667px]:visible border-b font-medium p-4 pl-8 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
                     Main
                   </th>
-                  <th className="border-b font-medium p-4 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
+                  <th className="max-[390px]:hidden border-b font-medium p-4 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
                     Pressure
                   </th>
-                  <th className="border-b font-medium p-4 pr-8 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
+                  <th className=" max-[390px]:hidden  max-[667px]:hidden border-b font-medium p-4 pr-8 pt-0 pb-3 text-slate-700 dark:text-slate-200 text-left">
                     Humidty
                   </th>
                 </tr>
@@ -49,16 +49,16 @@ function WeatherWindow() {
                   <td className="border-b border-slate-100  p-4 text-slate-600 ">
                   {location.state? location.state.main.temp : ""}
                   </td>
-                  <td className="border-b border-slate-100  p-4 pr-8 text-slate-600">
+                  <td className="max-[390px]:hidden border-b border-slate-100  p-4 pr-8 text-slate-600">
                   {location.state? location.state.weather[0].description : ""}
                   </td>
-                  <td className="border-b border-slate-100  p-4 pl-8 text-slate-600">
+                  <td className="max-[390px]:hidden border-b border-slate-100  p-4 pl-8 text-slate-600">
                   {location.state? location.state.weather[0].main : ""}
                   </td>
-                  <td className="border-b border-slate-100  p-4 text-slate-600">
+                  <td className=" max-[390px]:hidden border-b border-slate-100  p-4 text-slate-600">
                   {location.state? location.state.main.pressure :""}
                   </td>
-                  <td className="border-b border-slate-100  p-4 pr-8 text-slate-600 ">
+                  <td className="max-[390px]:hidden max-[667px]:hidden border-b border-slate-100  p-4 pr-8 text-slate-600 ">
                   {location.state? location.state.main.humidity: ""}
                   </td>
                 </tr>
