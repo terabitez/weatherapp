@@ -18,12 +18,9 @@ function Home() {
     try {
       const response = await fetch(apiUrl);
       const data = await response.json();
-      console.log(data);
-      console.log(user);
-
+     
       redirect(data);
     } catch (error) {
-      console.error(error);
       return null;
     }
   }

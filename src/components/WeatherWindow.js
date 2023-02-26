@@ -8,7 +8,6 @@ function WeatherWindow() {
 
   const navigate = useNavigate();
   const onBack = () => {
-    console.log(location.state);
     navigate("/home");
   };
 
