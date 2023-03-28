@@ -1,5 +1,5 @@
 # weatherapp
-A weather app to demonstrate react development workflow and concepts
+A weather app to demonstrate react development routing workflow and authentication concepts 
 
 - Uses tailwind for styling
 - React-router for routing
